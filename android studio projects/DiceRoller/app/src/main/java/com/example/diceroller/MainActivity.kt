@@ -3,6 +3,7 @@ package com.example.diceroller
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 // This activity allows the user to roll a die and view the result on the screen
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         val dice= Dice(6)
         val diceOneRoll = dice.roll()
         val diceTwoRoll = dice.roll()
+
+        if (diceOneRoll == 6 && diceTwoRoll == 6) {
+            Toast.makeText(this,"You got a Yahtzee!", Toast.LENGTH_SHORT ).show()
+        }
 
         // Find the imageView in the layout
         val diceOneImage: ImageView = findViewById(R.id.diceOneView)
