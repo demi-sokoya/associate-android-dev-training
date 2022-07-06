@@ -1,0 +1,10 @@
+#Wed Jul 06 16:10:20 ADT 2022
+base.2=C\:\\Users\\Demi Sokoya\\Documents\\GitHub\\associate-android-dev-training\\android studio projects\\DiceRoller\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+path.2=11/classes.dex
+base.1=C\:\\Users\\Demi Sokoya\\Documents\\GitHub\\associate-android-dev-training\\android studio projects\\DiceRoller\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+path.1=0/classes.dex
+base.0=C\:\\Users\\Demi Sokoya\\Documents\\GitHub\\associate-android-dev-training\\android studio projects\\DiceRoller\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
