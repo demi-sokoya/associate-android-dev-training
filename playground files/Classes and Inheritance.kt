@@ -1,4 +1,5 @@
 import kotlin.math.PI
+import kotlin.math.sqrt
 
 fun main() {
     val squareCabin = SquareCabin(6, 50.0)
@@ -6,19 +7,24 @@ fun main() {
     val roundTower = RoundTower(4, 15.5)
 
     with(squareCabin){
-    println("\nSquare Cabin\n============")
-    println("Capacity: ${capacity}")
-    println("Material: ${buildingMaterial}")
-    println("Has room? ${hasRoom()}")
-    println("Floor area: ${floorArea()}")
+    	println("\nSquare Cabin\n============")
+    	println("Capacity: ${capacity}")
+    	println("Material: ${buildingMaterial}")
+    	println("Has room? ${hasRoom()}")
+    	println("Floor area: ${floorArea()}")
     }
     
     with(roundHut) {
-    println("\nRound Hut\n=========")
-    println("Material: ${buildingMaterial}")
-    println("Capacity: ${capacity}")
-    println("Has room? ${hasRoom()}")
-    println("Floor area: ${floorArea()}")
+    	println("\nRound Hut\n=========")
+    	println("Material: ${buildingMaterial}")
+    	println("Capacity: ${capacity}")
+    	println("Has room? ${hasRoom()}")
+    	println("Floor area: ${floorArea()}")
+    	println("Has room? ${hasRoom()}")
+		getRoom()
+		println("Has room? ${hasRoom()}")
+		getRoom()
+    	println("Carpet Length: ${calculateMaxCarpetLength()}")
     }
     
     with(roundTower) {
@@ -27,6 +33,7 @@ fun main() {
         println("Capacity: ${capacity}")
         println("Has room? ${hasRoom()}")
         println("Floor area: ${floorArea()}")
+        println("Carpet Length: ${calculateMaxCarpetLength()}")
     }
 }
 
@@ -40,6 +47,15 @@ abstract class Dwelling(private var residents: Int){
     }
     
     abstract fun floorArea(): Double
+    
+    fun getRoom() {
+        if (hasRoom()) {
+            residents++
+            println("You got a room!")
+        } else {
+            println("Sorry, at capacity and no rooms left.")
+        }
+    }
 }
 
 class SquareCabin(residents: Int, 
@@ -62,6 +78,12 @@ open class RoundHut(residents: Int,
     override fun floorArea(): Double {
         return PI * radius * radius
     }
+    
+    fun calculateMaxCarpetLength(): Double {
+    
+    	return sqrt(2.0) * radius
+    }
+
 }
 
 class RoundTower(residents: Int, radius: Double,
